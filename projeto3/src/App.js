@@ -44,7 +44,7 @@ const JogosArrayBanco = [{
   {
     id: 5,
     nomeJogo: "BioShock: The Collection",
-    logoUrl:"https://data4.origin.com/content/dam/originx/web/app/games/witcher/the-witcher-wild-hunt/the-witcher-wild-hunt_gdp-logo.png",
+    logoUrl:"https://cdn-0.imagensemoldes.com.br/wp-content/uploads/2021/07/Bioshock-PNG.png",
     imagemUrl: "https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_BioShockTheCollection_image1600w.jpg",
     trailerUrl: "https://www.youtube.com/embed/QtwY33n5WIo",
     description: "Retorne às cidades de Rapture e Columbia e experimente a franquia ganhadora de prêmios BioShock como nunca antes. BioShock: The Collection reconta as jornadas épicas do universo de BioShock, belamente remasterizado em 1080p. BioShock: The Collection traz todo o conteúdo para um jogador de BioShock, BioShock 2 e BioShock Infinite, todo o conteúdo adicional para um jogador, 'Columbia's Finest' pack e Director's Commentary: Imagining BioShock, com Ken Levine e Shawn Robertson.",
