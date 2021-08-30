@@ -98,7 +98,7 @@ export const Modal = ({ showModal, setShowModal, selectedGame}) => {
               <iframe src={(selectedGame.trailerUrl)+("?controls=0&autoplay=1")} title={("Trailer do Jogo:")+(selectedGame.nomeJogo)} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               <ModalContent>
                 <h1>{selectedGame.nomeJogo}</h1>
-                <p>Get exclusive access to our next launch.</p>
+                <p>{selectedGame.description}</p>
               </ModalContent>
               <CloseModalButton
                 aria-label='Close modal'
