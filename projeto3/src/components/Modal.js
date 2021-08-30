@@ -15,11 +15,10 @@ const Background = styled.div`
 `;
 
 const ModalWrapper = styled.div`
-  width: 1000px;
-  height: 800px;
+  width:110em;
+  height: 100%;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
-  background: #fff;
-  color: #000;
+  background: #181818;
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
@@ -27,20 +26,6 @@ const ModalWrapper = styled.div`
   border-radius: 10px;
 `;
 
-
-const ModalContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  line-height: 1.8;
-  color: #141414;
-
-  p {
-    margin-bottom: 1rem;
-  }
-
-`;
 
 const CloseModalButton = styled(MdClose)`
   color: #f30000;
@@ -95,11 +80,17 @@ export const Modal = ({ showModal, setShowModal, selectedGame}) => {
         <Background onClick={closeModal} ref={modalRef}>
           <animated.div style={animation}>
             <ModalWrapper showModal={showModal}>
-              <iframe src={(selectedGame.trailerUrl)+("?controls=0&autoplay=1")} title={("Trailer do Jogo:")+(selectedGame.nomeJogo)} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              <ModalContent>
-                <h1>{selectedGame.nomeJogo}</h1>
+            <iframe src={(selectedGame.trailerUrl)+("?controls=0&autoplay=1")} title={("Trailer do Jogo:")+(selectedGame.nomeJogo)} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <div class="modalContent">
+                <img src={selectedGame.logoUrl} alt={("Logomarca do Jogo:")+(selectedGame.nomeJogo)}></img>
+                <ul><li><h4>Gênero:</h4></li>
+                <li>{selectedGame.gender}</li>
+                <br></br>
+                <li><h4>Lançamento:</h4></li>
+                <li>{selectedGame.releaseYear}</li>
+                </ul>
                 <p>{selectedGame.description}</p>
-              </ModalContent>
+              </div>
               <CloseModalButton
                 aria-label='Close modal'
                 onClick={() => setShowModal(prev => !prev)}
